@@ -1,3 +1,24 @@
+import re
+
+
+EMPTY_TEXT = ' - '
+
+
+# Функция для исправления фамилии (первого поля)
+def correct_name(query):
+    # Для его корректировки нужно удалить все символы кроме
+    # русских букв, а затем выполнить функцию capitalize(),
+    # Примеры:
+    # Было: '->юров123<-',    стало: 'Юров'
+    # Было: '-=**hello**=-',  стало: ' - '
+
+    corrected = re.sub(r'[^а-яА-Я]+', '', query)
+    if len(corrected) > 0:
+        return corrected.capitalize()
+    else:
+        return EMPTY_TEXT
+
+
 if __name__ == '__main__':
     with open('input.txt', 'r', encoding='utf-8') as file:
         lines = file.readlines()
