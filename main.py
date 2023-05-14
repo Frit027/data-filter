@@ -54,6 +54,19 @@ def correct_phone(query):
         return EMPTY_TEXT
 
 
+def correct_email(query):
+    corrected = re.sub(r'\s+', '', query)
+    duplicates = '@.'
+    for symbol in duplicates:
+        corrected = re.sub(f'[{symbol}]+', symbol, corrected)
+
+    email_regex = re.compile(r'[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w]+)*\.[A-Za-z]{2,}')
+    if re.fullmatch(email_regex, corrected):
+        return corrected
+    else:
+        return EMPTY_TEXT
+
+
 if __name__ == '__main__':
     with open('input.txt', 'r', encoding='utf-8') as file:
         lines = file.readlines()
