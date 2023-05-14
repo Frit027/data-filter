@@ -37,6 +37,11 @@ class ProgramTest(TestCase):
         self.assertEqual(open_input(test_path), [test_content])
         os.remove(test_path)
 
+    def test_len_fields(self):
+        test_content = 'Сидоров 17 +78478558260 donec@icloud.com'
+        expected = 'Некорректная строка\n'
+        self.assertEqual(correct_all([test_content]), expected)
+
     def test_correcting_one_line(self):
         test_query = ['1Игорь1|Мне 50 лет|+8(111)111-1-1-1-1|hello-world@mail...ru']
         expected = 'Игорь|50|+7 (111) 111-11-11|hello-world@mail.ru\n'
