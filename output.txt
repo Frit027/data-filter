@@ -1,0 +1,11 @@
+Юров|22|+7 (934) 969-53-44|tristique@google.com
+Иванов|35|+7 (402) 377-26-77|mauris@aol.edu
+Иванов|35| - | - 
+Петров|40|+7 (598) 655-77-13|vehicula.risus@google.net
+Петров|31|+7 (820) 588-59-38|arcu@hotmail.couk
+Некорректная строка
+Некорректная строка
+Борисов| - | - |nam.porttitor@icloud.org
+ - |2| - | - 
+Некорректная строка
+Жуков|58|+7 (150) 801-81-48|etiam.imperdiet@hotmail.net
