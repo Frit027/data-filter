@@ -11,3 +11,6 @@ jobs:
     steps:
       - name: clone repository to VM
         uses: actions/checkout@v3
+
+      - name: run programm
+        run: python main.py
