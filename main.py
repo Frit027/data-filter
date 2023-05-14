@@ -63,6 +63,7 @@ if __name__ == '__main__':
             email = correct_email(email)
 
             corrected_line = '|'.join((name, age, phone, email))
+
             file.write(f'{corrected_line}\n')
 
 print('Файл исправлен и сохранен как output.txt')
