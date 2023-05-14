@@ -1,0 +1,13 @@
+name: CI_Actions
+ 
+on:
+  push:
+    branches: 
+      - main
+      
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone repository to VM
+        uses: actions/checkout@v3
