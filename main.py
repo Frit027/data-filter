@@ -56,3 +56,14 @@ if __name__ == '__main__':
                 file.write('Некорректная строка\n')
                 continue
             name, age, phone, email = line_content
+
+            name = correct_name(name)
+            age = correct_age(age)
+            phone = correct_phone(phone)
+            email = correct_email(email)
+
+            corrected_line = '|'.join((name, age, phone, email))
+
+            file.write(f'{corrected_line}\n')
+
+print('Файл исправлен и сохранен как output.txt')
